@@ -1,0 +1,145 @@
+I, [2020-10-27T13:02:43.383035 #41111]  INFO -- : Registered expected interaction GET /clients
+D, [2020-10-27T13:02:43.383290 #41111] DEBUG -- : {
+  "description": "a request for all clients",
+  "providerState": "i have a list of clients",
+  "request": {
+    "method": "GET",
+    "path": "/clients",
+    "headers": {
+      "Accept": "application/json, text/plain, */*"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": [
+      {
+        "firstName": "Lisa",
+        "lastName": "Simpson",
+        "age": 8,
+        "id": 1
+      },
+      {
+        "firstName": "Wonder",
+        "lastName": "Woman",
+        "age": 30,
+        "id": 2
+      },
+      {
+        "firstName": "Homer",
+        "lastName": "Simpson",
+        "age": 39,
+        "id": 3
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2020-10-27T13:02:43.390786 #41111]  INFO -- : Received request GET /clients
+D, [2020-10-27T13:02:43.390873 #41111] DEBUG -- : {
+  "path": "/clients",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.19.2",
+    "Host": "localhost:8081",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-10-27T13:02:43.391176 #41111]  INFO -- : Found matching response for GET /clients
+D, [2020-10-27T13:02:43.391260 #41111] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": [
+    {
+      "firstName": "Lisa",
+      "lastName": "Simpson",
+      "age": 8,
+      "id": 1
+    },
+    {
+      "firstName": "Wonder",
+      "lastName": "Woman",
+      "age": 30,
+      "id": 2
+    },
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "age": 39,
+      "id": 3
+    }
+  ]
+}
+I, [2020-10-27T13:02:43.397513 #41111]  INFO -- : Verifying - interactions matched
+I, [2020-10-27T13:02:43.400588 #41111]  INFO -- : Cleared interactions
+I, [2020-10-27T13:02:43.404695 #41111]  INFO -- : Registered expected interaction POST /clients
+D, [2020-10-27T13:02:43.404814 #41111] DEBUG -- : {
+  "description": "a request to create client with firstname and lastname",
+  "providerState": "i create a new client",
+  "request": {
+    "method": "POST",
+    "path": "/clients",
+    "headers": {
+      "Content-Type": "application/json;charset=utf-8"
+    },
+    "body": {
+      "firstName": "Rafaela",
+      "lastName": "Azevedo",
+      "age": 29
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "firstName": "Rafaela",
+      "lastName": "Azevedo",
+      "age": 29,
+      "id": 3
+    }
+  },
+  "metadata": null
+}
+I, [2020-10-27T13:02:43.408622 #41111]  INFO -- : Received request POST /clients
+D, [2020-10-27T13:02:43.408706 #41111] DEBUG -- : {
+  "path": "/clients",
+  "query": "",
+  "method": "post",
+  "body": {
+    "firstName": "Rafaela",
+    "lastName": "Azevedo",
+    "age": 29
+  },
+  "headers": {
+    "Content-Length": "53",
+    "Content-Type": "application/json;charset=utf-8",
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.19.2",
+    "Host": "localhost:8081",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-10-27T13:02:43.408867 #41111]  INFO -- : Found matching response for POST /clients
+D, [2020-10-27T13:02:43.408944 #41111] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "firstName": "Rafaela",
+    "lastName": "Azevedo",
+    "age": 29,
+    "id": 3
+  }
+}
+I, [2020-10-27T13:02:43.434418 #41111]  INFO -- : Verifying - interactions matched
+I, [2020-10-27T13:02:43.437355 #41111]  INFO -- : Cleared interactions
+I, [2020-10-27T13:02:43.441386 #41111]  INFO -- : Writing pact for ClientsService to /Users/martngio/repos/contract-testing-pactjs-nodejs-jest/__tests__/contract/pacts/frontend-clientsservice.json
